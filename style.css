@@ -24,10 +24,25 @@
     margin: 20px;
   }
   
+
   .container .tenor-gif-embed {
     max-width: 200px;
+    border-radius: 50px; /* Adjust the value as needed */
+    position: relative; /* Make sure the pseudo-element is positioned relative to this */
   }
   
+  .container .tenor-gif-embed:before {
+    content: ""; /* Add a pseudo-element to create the border radius effect on the top-left and bottom-right corners */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background-color: white; /* Set the background color of the pseudo-element to match the background color of the parent container */
+    border-radius: 50px 0 0 50px; /* Add border radius to the pseudo-element */
+  }
+
+
   .container .btn {
     display: flex;
     gap: 25px;
